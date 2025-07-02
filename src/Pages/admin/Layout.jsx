@@ -1,6 +1,7 @@
 import React from 'react'
 import { assets } from '../../assets/assets'
-import { useNavigate } from 'react-router-dom'
+import { Outlet, useNavigate } from 'react-router-dom'
+import Sidebar from '../../Components/admin/Sidebar'
 
 const Layout = () => {
 
@@ -26,6 +27,13 @@ const Layout = () => {
           Logout
         </button>
       </div>
+      <div className='flex h-[calc(100vh-70px)]'>
+          <div>
+            {/* <h4>Sidebar</h4> */}
+            <Sidebar/>
+            <Outlet/>
+          </div>
+        </div>
     </>
   )
 }
